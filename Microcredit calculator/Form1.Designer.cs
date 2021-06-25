@@ -35,13 +35,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnRaschet = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.Save = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.txProc = new System.Windows.Forms.TextBox();
-            this.TbTotalSum = new System.Windows.Forms.TextBox();
-            this.TbSumProc = new System.Windows.Forms.TextBox();
-            this.TbEffStav = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TotalSum = new System.Windows.Forms.TextBox();
+            this.SumProc = new System.Windows.Forms.TextBox();
+            this.EffStav = new System.Windows.Forms.TextBox();
+            this.SummZayma = new System.Windows.Forms.TextBox();
+            this.Period = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -117,18 +117,18 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Эффективная ставка:";
             // 
-            // Save
+            // btnSave
             // 
-            this.Save.BackColor = System.Drawing.SystemColors.Highlight;
-            this.Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Save.ForeColor = System.Drawing.SystemColors.Control;
-            this.Save.Location = new System.Drawing.Point(254, 223);
-            this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(143, 33);
-            this.Save.TabIndex = 13;
-            this.Save.Text = "Сохранить ";
-            this.Save.UseVisualStyleBackColor = false;
-            this.Save.Click += new System.EventHandler(this.button2_Click);
+            this.btnSave.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSave.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSave.Location = new System.Drawing.Point(254, 223);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(143, 33);
+            this.btnSave.TabIndex = 13;
+            this.btnSave.Text = "Сохранить ";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.button2_Click);
             // 
             // txProc
             // 
@@ -139,58 +139,58 @@
             this.txProc.TabIndex = 14;
             this.txProc.TextChanged += new System.EventHandler(this.txProc_TextChanged);
             // 
-            // TbTotalSum
+            // TotalSum
             // 
-            this.TbTotalSum.Location = new System.Drawing.Point(208, 396);
-            this.TbTotalSum.Multiline = true;
-            this.TbTotalSum.Name = "TbTotalSum";
-            this.TbTotalSum.Size = new System.Drawing.Size(154, 20);
-            this.TbTotalSum.TabIndex = 15;
+            this.TotalSum.Location = new System.Drawing.Point(208, 396);
+            this.TotalSum.Multiline = true;
+            this.TotalSum.Name = "TotalSum";
+            this.TotalSum.Size = new System.Drawing.Size(154, 20);
+            this.TotalSum.TabIndex = 15;
             // 
-            // TbSumProc
+            // SumProc
             // 
-            this.TbSumProc.Location = new System.Drawing.Point(208, 424);
-            this.TbSumProc.Multiline = true;
-            this.TbSumProc.Name = "TbSumProc";
-            this.TbSumProc.Size = new System.Drawing.Size(154, 20);
-            this.TbSumProc.TabIndex = 16;
+            this.SumProc.Location = new System.Drawing.Point(208, 424);
+            this.SumProc.Multiline = true;
+            this.SumProc.Name = "SumProc";
+            this.SumProc.Size = new System.Drawing.Size(154, 20);
+            this.SumProc.TabIndex = 16;
             // 
-            // TbEffStav
+            // EffStav
             // 
-            this.TbEffStav.Location = new System.Drawing.Point(209, 450);
-            this.TbEffStav.Multiline = true;
-            this.TbEffStav.Name = "TbEffStav";
-            this.TbEffStav.Size = new System.Drawing.Size(154, 20);
-            this.TbEffStav.TabIndex = 17;
+            this.EffStav.Location = new System.Drawing.Point(209, 450);
+            this.EffStav.Multiline = true;
+            this.EffStav.Name = "EffStav";
+            this.EffStav.Size = new System.Drawing.Size(154, 20);
+            this.EffStav.TabIndex = 17;
             // 
-            // textBox1
+            // SummZayma
             // 
-            this.textBox1.Location = new System.Drawing.Point(208, 34);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 20);
-            this.textBox1.TabIndex = 18;
+            this.SummZayma.Location = new System.Drawing.Point(208, 34);
+            this.SummZayma.Multiline = true;
+            this.SummZayma.Name = "SummZayma";
+            this.SummZayma.Size = new System.Drawing.Size(154, 20);
+            this.SummZayma.TabIndex = 18;
             // 
-            // textBox2
+            // Period
             // 
-            this.textBox2.Location = new System.Drawing.Point(208, 60);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 20);
-            this.textBox2.TabIndex = 19;
+            this.Period.Location = new System.Drawing.Point(208, 60);
+            this.Period.Multiline = true;
+            this.Period.Name = "Period";
+            this.Period.Size = new System.Drawing.Size(154, 20);
+            this.Period.TabIndex = 19;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 490);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.TbEffStav);
-            this.Controls.Add(this.TbSumProc);
-            this.Controls.Add(this.TbTotalSum);
+            this.Controls.Add(this.Period);
+            this.Controls.Add(this.SummZayma);
+            this.Controls.Add(this.EffStav);
+            this.Controls.Add(this.SumProc);
+            this.Controls.Add(this.TotalSum);
             this.Controls.Add(this.txProc);
-            this.Controls.Add(this.Save);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnRaschet);
             this.Controls.Add(this.label5);
@@ -214,13 +214,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnRaschet;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button Save;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txProc;
-        private System.Windows.Forms.TextBox TbTotalSum;
-        private System.Windows.Forms.TextBox TbSumProc;
-        private System.Windows.Forms.TextBox TbEffStav;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TotalSum;
+        private System.Windows.Forms.TextBox SumProc;
+        private System.Windows.Forms.TextBox EffStav;
+        private System.Windows.Forms.TextBox SummZayma;
+        private System.Windows.Forms.TextBox Period;
     }
 }
 
