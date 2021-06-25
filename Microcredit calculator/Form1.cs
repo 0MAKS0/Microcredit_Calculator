@@ -24,15 +24,20 @@ namespace Microcredit_calculator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double startcount = Convert.ToDouble(numericUpDown1.Value);
-            double rate = Convert.ToDouble(numericUpDown2.Value);
-            int day = Convert.ToInt32(numericUpDown3.Value);
 
-            rate = rate / 100;
-            int periods = 0;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txProc_TextChanged(object sender, EventArgs e)
         {
 
         }
