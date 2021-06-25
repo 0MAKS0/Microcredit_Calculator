@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Microcredit_calculator
 {
@@ -29,35 +30,34 @@ namespace Microcredit_calculator
         {
             try
             {
-                double zaym = Convert.ToDouble(SummZayma.Text);
-                double period = Convert.ToDouble(Period.Text);
+                double ZAIM = Convert.ToDouble(SummZayma.Text);
+                double PERIOD = Convert.ToDouble(Period.Text);
 
-                if (zaym > 500000 || zaym < 0)
+                if (ZAIM > 500000 || ZAIM < 0)
                 {
                     MessageBox.Show("!Сумма займа введена неверно!");
                     throw new ArgumentNullException();
                 }
 
-
-                if (period > 365 || period < 1)
+                if (PERIOD > 365 || PERIOD < 1)
                 {
                     MessageBox.Show("!Период введен неверно!");
                     throw new ArgumentNullException();
                 }
 
-                var data = txProc.Text.Split(' ');
+                var data = Proc.Text.Split(' ');
 
-                for (int i = 0; i < period; i++)
+                for (int i = 0; i < PERIOD; i++)
                 {
-                    SummProcent += Convert.ToDouble(data[i]) / 100 * zaym;
+                    SummProcent += Convert.ToDouble(data[i]) / 100 * ZAIM;
                 }
 
                 SumProc.Text = SummProcent.ToString();
 
-                TotalSumm = zaym + SummProcent;
+                TotalSumm = ZAIM + SummProcent;
                 TotalSum.Text = TotalSumm.ToString();
 
-                EffStavka = SummProcent / zaym / period * 100;
+                EffStavka = SummProcent / ZAIM / PERIOD * 100;
                 EffStav.Text = EffStavka.ToString();
 
                 SummProcent = 0;
@@ -81,6 +81,31 @@ namespace Microcredit_calculator
         private void txProc_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Save_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveTableAsCSV = new SaveFileDialog();
+            saveTableAsCSV.Filter = "Документ TXT (*.txt) |*.txt";
+            saveTableAsCSV.Title = "Сохранить результат расчетов";
+            if (saveTableAsCSV.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    FileStream file = new FileStream(saveTableAsCSV.FileName, FileMode.Create);
+                    StreamWriter sw = new StreamWriter(file, Encoding.Default);
+                    sw.Write("Общая сумма выплаты" + ":" + " " + TotalSum.Text);
+                    sw.WriteLine();
+                    sw.Write("Сумма переплаты" + ":" + " " + SumProc.Text);
+                    sw.WriteLine();
+                    sw.Write("Эффективная ставка" + ":" + " " + EffStav.Text);
+                    sw.WriteLine();
+
+                    sw.Close();
+                }
+                catch
+                { }
+            }
         }
     }
 }

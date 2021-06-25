@@ -33,15 +33,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnRaschet = new System.Windows.Forms.Button();
+            this.Raschet = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.txProc = new System.Windows.Forms.TextBox();
+            this.Proc = new System.Windows.Forms.TextBox();
             this.TotalSum = new System.Windows.Forms.TextBox();
             this.SumProc = new System.Windows.Forms.TextBox();
             this.EffStav = new System.Windows.Forms.TextBox();
             this.SummZayma = new System.Windows.Forms.TextBox();
             this.Period = new System.Windows.Forms.TextBox();
+            this.Save = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -58,7 +58,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(90, 116);
+            this.label2.Location = new System.Drawing.Point(168, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 20);
             this.label2.TabIndex = 1;
@@ -94,18 +94,18 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Сумма выплаты : ";
             // 
-            // btnRaschet
+            // Raschet
             // 
-            this.btnRaschet.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnRaschet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnRaschet.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnRaschet.Location = new System.Drawing.Point(254, 183);
-            this.btnRaschet.Name = "btnRaschet";
-            this.btnRaschet.Size = new System.Drawing.Size(143, 34);
-            this.btnRaschet.TabIndex = 5;
-            this.btnRaschet.Text = "Рассчитать ";
-            this.btnRaschet.UseVisualStyleBackColor = false;
-            this.btnRaschet.Click += new System.EventHandler(this.button1_Click);
+            this.Raschet.BackColor = System.Drawing.SystemColors.Highlight;
+            this.Raschet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Raschet.ForeColor = System.Drawing.SystemColors.Control;
+            this.Raschet.Location = new System.Drawing.Point(133, 238);
+            this.Raschet.Name = "Raschet";
+            this.Raschet.Size = new System.Drawing.Size(154, 43);
+            this.Raschet.TabIndex = 5;
+            this.Raschet.Text = "Рассчитать ";
+            this.Raschet.UseVisualStyleBackColor = false;
+            this.Raschet.Click += new System.EventHandler(this.button1_Click);
             // 
             // label6
             // 
@@ -117,27 +117,14 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Эффективная ставка:";
             // 
-            // btnSave
+            // Proc
             // 
-            this.btnSave.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSave.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSave.Location = new System.Drawing.Point(254, 223);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(143, 33);
-            this.btnSave.TabIndex = 13;
-            this.btnSave.Text = "Сохранить ";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // txProc
-            // 
-            this.txProc.Location = new System.Drawing.Point(56, 139);
-            this.txProc.Multiline = true;
-            this.txProc.Name = "txProc";
-            this.txProc.Size = new System.Drawing.Size(154, 221);
-            this.txProc.TabIndex = 14;
-            this.txProc.TextChanged += new System.EventHandler(this.txProc_TextChanged);
+            this.Proc.Location = new System.Drawing.Point(133, 126);
+            this.Proc.Multiline = true;
+            this.Proc.Name = "Proc";
+            this.Proc.Size = new System.Drawing.Size(154, 60);
+            this.Proc.TabIndex = 14;
+            this.Proc.TextChanged += new System.EventHandler(this.txProc_TextChanged);
             // 
             // TotalSum
             // 
@@ -179,20 +166,34 @@
             this.Period.Size = new System.Drawing.Size(154, 20);
             this.Period.TabIndex = 19;
             // 
+            // Save
+            // 
+            this.Save.BackColor = System.Drawing.SystemColors.Highlight;
+            this.Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Save.ForeColor = System.Drawing.SystemColors.Control;
+            this.Save.Location = new System.Drawing.Point(133, 287);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(154, 43);
+            this.Save.TabIndex = 20;
+            this.Save.Text = "Сохранить";
+            this.Save.UseVisualStyleBackColor = false;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(438, 490);
+            this.Controls.Add(this.Save);
             this.Controls.Add(this.Period);
             this.Controls.Add(this.SummZayma);
             this.Controls.Add(this.EffStav);
             this.Controls.Add(this.SumProc);
             this.Controls.Add(this.TotalSum);
-            this.Controls.Add(this.txProc);
-            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.Proc);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnRaschet);
+            this.Controls.Add(this.Raschet);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -212,15 +213,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnRaschet;
+        private System.Windows.Forms.Button Raschet;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txProc;
+        private System.Windows.Forms.TextBox Proc;
         private System.Windows.Forms.TextBox TotalSum;
         private System.Windows.Forms.TextBox SumProc;
         private System.Windows.Forms.TextBox EffStav;
         private System.Windows.Forms.TextBox SummZayma;
         private System.Windows.Forms.TextBox Period;
+        private System.Windows.Forms.Button Save;
     }
 }
 
